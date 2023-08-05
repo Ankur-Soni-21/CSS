@@ -2,4 +2,19 @@ body{
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    background-color: blue;
+    /* used for setting background-color */
+    background: papayawhip;
+    /* using only background property helps us set mutiple stuff at once including color  */
+    color: darkblue;
+    /* used for setting text color */
+    color: rgb(0, 255, 0); 
+    /* other way tos et color intead of using names */
+}
+
+p{
+    color: rgba(255, 0, 0, 0.3);
+    /* a is used for setting the opacity of the color */
+    background-color: #ffffff;
+    /* this is hex value  : # (red)(green)(blue) each takes two value*/
 }
