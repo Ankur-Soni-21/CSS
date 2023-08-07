@@ -1,0 +1,41 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+/* *Some of the form elements need to inherit the properties like this as they don't inherit directly */
+/* input,
+button {
+    font: inherit;
+} */
+
+p{
+    /* TEXT SETTINGS  */
+    text-decoration: underline;
+    text-transform: capitalize;
+    /* uppercased the first letter only of every word  */
+    text-align: justify;
+    /* justify makes alligned to both sides  */
+    text-indent: 2rem;
+    /* indent means the starting of the paragraph will have an empty space of 2rem before the text starts  */
+
+    /* UNIQUE TEXT font-feature-settings */
+    line-height: 1.5;
+    /* makes the text a little spaced out  */
+    letter-spacing: 5px;
+    word-spacing: 3px;
+
+
+    /* FONT PROPERTIES  */
+    font-weight: 600;
+    font-weight: lighter;
+    /* changing the boldness basically  */
+    font-style: italic;
+
+
+    font-family: serif;
+    /* *Only used in body or html tag for complete coverage  */
+    font-family: cursive;
+
+}
+

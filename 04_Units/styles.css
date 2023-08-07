@@ -1,0 +1,60 @@
+header {
+    width: 50%;
+}
+
+body {
+    background-color: skyblue;
+    min-height: 100vh;
+    /*
+    vh==> viewport height
+    don't apply vh to only height/widht becuase sometimes content outgrows the viewport 
+    and gives a horizontal scrollbar which everone hates in the case of width
+    always use min-height/width
+    u can use this if height of an element only grows with the size of the content
+    u  can make its size to complete 100%
+    */
+
+}
+
+h1 {
+    /* percentages are based on the measurement of the parent element */
+    /* now the width of the h1 will 50% of 50% because width of header[PARENT] is 50% */
+    width: 50%;
+    /* default width is 100%  for block elements */
+    border: 2px dashed red;
+}
+
+h2 {
+    font-size: 20px;
+    /* default size is 16px for browsers */
+    border: 2px dashed red;
+    /* size in px remains same regardless of the viewport size */
+}
+
+article {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    /*16px*/
+    /* rem assigns value relative to the root[HTML-Tag] element */
+    /* even if article tag is using rem it won't affect the para cuz root font is still th same  */
+
+    /* but if use just "em" then it will inherit the parent element  */
+    font-size: 0.4em;
+    /*32px*/
+
+    padding: 2em;
+    /*32px*/
+    /*
+        Font size of p ==> 32px
+        padding of p ==> 2em
+        2em ==> 32*2 ==> 64px
+
+        *This is because em checks for font-size for the parent in case typographical properties  like settings font-sizes
+
+        *But in case of other properties like width , height and paddings it checks for font-size of itself    
+
+    */
+}

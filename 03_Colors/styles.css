@@ -5,7 +5,9 @@ body{
     background-color: blue;
     /* used for setting background-color */
     background: papayawhip;
-    /* using only background property helps us set mutiple stuff at once including color  */
+    /* using only background property helps us set mutiple stuff at once including color 
+        all the poperties of backgorund ===> background: #f9f9f9 url(background-image.jpg) repeat-y right top;    
+    */
     color: darkblue;
     /* used for setting text color */
     color: rgb(0, 255, 0); 
@@ -17,5 +19,7 @@ p{
     /* a is used for setting the opacity of the color */
     background-color: #ffffff;
     /* this is hex value  : # (red)(green)(blue) each takes two value*/
-    /*Hi*/
+    color : hsl(138, 100%, 50%);
+    /* hsl ==> hue[color]   saturation  lightness*/
+    
 }
