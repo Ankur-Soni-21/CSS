@@ -36,6 +36,8 @@ p{
     font-family: serif;
     /* *Only used in body or html tag for complete coverage  */
     font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
+    /* if the name of the font has multiple words it needs quotes  */
 
 }
 
