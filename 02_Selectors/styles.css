@@ -1,45 +1,64 @@
- * {
+* {
     font-family: monospace;
 }
-/* used for selecting everything 
-    mainly used for a CSS Reset */
+
+/* 
+    used for selecting everything 
+    mainly used for a CSS Reset 
+*/
 
 body {
     font-size: 22px;
+    /*Inherited*/
+    border: solid black;
+    /* Not inherited*/
+
+    /*if you want buttons , inputs, and other stuff 
+        font : inherit;
+    */
 }
-/* NOT All settings are inehrited by the children elemnts 
+
+/* 
+    NOT All settings are inehrited by the children elemnts 
     any kind of form elements like button, textarea etc. never inherits anything from the parent element
-    other CSS properties like border box are also not inherited by every chil element*/
+    other CSS properties like border box are also not inherited by every chil element
+*/
 
 p {
     color: purple;
 }
+
 /* all paragraphs inherit the color purple */
 
 .gray {
     color: gray;
 }
+
 /* only clases with color gray inherit this color */
 
 #third {
     color: red;
 }
+
 /* ID has highest precedence even if thirs has class gray red takes over  */
 
 h1,
 h2 {
     color: blue;
 }
+
 /* multiple HTMl elemnets can be selected at once using commas */
 
 p span {
     text-transform: capitalize;
     background-color: gold;
 }
+
 /* any span inside a paragraph will be modified */
 
 .highlight {
     text-transform: capitalize;
     background-color: brown;
 }
+
 /* giving the span element a class is a better practice and makes code reusable */
