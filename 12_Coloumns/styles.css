@@ -32,7 +32,7 @@ body {
 
 .coloumns h2 {
     background-color: #333;
-    color: whitesmoke;
+    color: wheat;
     margin-bottom: 2rem;
     padding: 1rem;
     /* a problem that may arise is at somepoint while changing the wiewport width the padding of h2 may show up in 2 diffrent columns */
