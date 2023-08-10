@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+nav {
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2 {
+    padding: 1rem;
+    background-color: gold;
+    border-radius: 2rem 2rem 0 0;
+}
+
+p {
+    font-size: 2rem;
+}
+
+a {
+    color: hsl(210, 100%, 56%);
+    text-decoration: none;
+}
+
+a:visited {
+    color: hsl(231, 100%, 56%);
+}
+
+a:hover,
+a:focus {
+    color: hsl(60, 100%, 10%, 0.3);
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid #333;
+}
+
+li a {
+    display: block;
+}
+
+li a,
+li a:visited {
+    color: #333;
+}
+
+li a:hover,
+li a:focus {
+    background: #333;
+    color: whitesmoke;
+    cursor: pointer;
+    /* *upon hovering/focus only the ancher tag will change its color not the whole li  */
+    /* *coz the anchor tag is inline element , so we need to make it to block level element */
+    /* *as they take 100%  of the width and height provided by their parent element */
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+}

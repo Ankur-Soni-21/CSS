@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+/* !coloumns doesnot divide the 4 para in 4 difeerent parts .... it divides the whole space */
+/* ! to 4 equal parts ... which means that paragraphs can still start from one cloumns  */
+/* ! and end in another leading to margin and padding problems ... cuz as view port length changes */
+/* ! the paras will move from one part to another leadng to having unessarry padding and margin at some places   */
+.coloumns {
+    column-count: 4;
+    column-width: 250px;
+    /* giving each part a width of 250px.... if not satisfied the viewport will only be divided into lesser no of parts  */
+
+    /* another of doing the same is  */
+    columns: 4 250px;
+
+    /* giving a rule[border] to the coulummns */
+    column-rule: 2px lightgray solid;
+}
+
+.coloumns p {
+    /* solving the problem for the paras  */
+    margin-bottom: 2rem;
+}
+
+.coloumns h2 {
+    background-color: #333;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    /* a problem that may arise is at somepoint while changing the wiewport width the padding of h2 may show up in 2 diffrent columns */
+    break-inside: avoid;
+}

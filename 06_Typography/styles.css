@@ -39,5 +39,7 @@ p{
     font-family: 'Courier New', Courier, monospace;
     /* if the name of the font has multiple words it needs quotes  */
 
+    /* you can embed font urs from google fonts in the html code and then change the font-family int the CSS  */
+    /* don't add more urls cuz it will slow down the load time fo your website  */
 }
 

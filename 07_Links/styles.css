@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: hsl(207, 44%, 49%);
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover,
+a:focus {
+    /* *focus is used for accssibility --> when you tab through the links instead of clicking */
+    /* *there is an outline , so on focus allows tabs to turn blue even if you use tab key instead of clicking */
+    color: hsla(182, 44%, 49%, 0.75);
+    background-color: hsl(207, 44%, 49%, 0.05);
+    /* changes the color of the box of the focus tab  */
+}
+
+a:active {
+    /* works on clicking/holding/dragging the link  */
+    color: red;
+}
+
+/* any kind of pseudo class has more specificity then original tag so u can also define them before  */
+/* defining the original class/tag itself */

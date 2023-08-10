@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    background-color: lightgray;
+    /* till now you will be able to see the lightray color spanning accross the screen taking all the width  */
+    /* with a little space between the two paragraphs . that is cuz these are block level elements */
+}
+
+main {
+    background-color: aqua;
+    width: 50%;
+    /* reducing width of the paragrapghs */
+    /* now the paragraphs are taking 100% of all the 50%width given to them */
+}
+
+.opposite {
+    background-color: #333;
+    color: whitesmoke;
+
+    margin-top:50px;
+    margin-bottom: 3px;
+    /* both the margin top and bottom won't work on an inline block element */
+
+    margin-left: 20px;
+    /* left and right does work  */
+
+    height: 2rem;
+    width: 100px;
+    /* similarly both height and width won't work on inline elements  */
+
+    padding: 100px 2rem;
+    border: 10px blue dashed;
+    /* padding and border does work cuz they are part of the content-box  
+    but it overlaps the content */
+
+    /* !TO solve this problem we use inline block  */
+    display: inline-block;
+    /* it  maintains the inline properties of not covering the whole space but the measurements of height/width and margin can be edited now  */
+
+}

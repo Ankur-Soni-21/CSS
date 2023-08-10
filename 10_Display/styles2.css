@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+p {
+    font-size: 1rem;
+    background-color: lightcyan;
+}
+
+ul {
+    /* ul is a block type element */
+    list-style-type: none;
+    padding-left: 0;
+    text-align: right;
+    background-color: black;
+    margin: 0;
+}
+
+li {
+    /* li aswell are block type elements taking up 100% of the width  */
+    display: inline-block;
+    /* making the inline block --> places them in one line */
+    margin-inline: 0.5rem;
+}
+
+li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+li a:hover,
+li a:focus {
+    color: white;
+    opacity: 0.5;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 5% 10%;
+    font-size: 2rem;
+}
+
+/* you can change the html code for ol and make them start at a certain number and even reverse */
+ol {
+    list-style-type: disc;
+    /* bullets points  */
+    list-style-type: lower-alpha;
+    /* alphabetic order  */
+    /* default ==> decimal */
+    list-style-type: none;
+    padding: 0;
+    /* padding is made zero so that all the points are completely on the left hand side  */
+
+}
+
+ul {
+    list-style-type: square;
+    /* making the bullet points square  */
+    text-align: center;
+    /* text allingn only centers the text not the bullet poinnts  */
+    list-style-position: inside;
+    /* this makes the bullets points allign with text  */
+    color: dodgerblue;
+    /* changes both points and text to blue  */
+    line-height: 1.6;
+    /* list-style-image: url("images/checkmark.png"); */
+    /* image is too big  */
+}
+
+/* you can set a the number of the li in the html code itself as well using "VALUE */
+li {
+    color: red;
+    /* makes all li red  */
+}
+
+ol li{
+    color: aqua;
+    /* makes only ol li aqua     */
+}
+
+ul li:nth-child(2){
+    color: green;
+    /* only makes the 2nd or multiple of 2 li of the ul green  */
+}
+
+::marker{
+    color: black;
+    /* makes the bullet and number points to color black  */
+    font-family: monospace;
+    font-size: 2rem;
+    content: ">>";
+    /* making a custom marker  */
+}
+
+ol ::marker{
+    content: "<<";
+    /* specifing a custom marker for ol only  */
+}
