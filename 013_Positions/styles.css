@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px solid black;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+}
+
+.inner-container {
+    border: 2px solid darkblue;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    position: relative;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: black;
+    /* default position ==> static */
+    position: absolute;
+    /* the moment you set this ther won't be change becuase you need to set the coordinates as well  */
+    top: 0;
+    /* makes it stick to the top  */
+    left: 0;
+
+    /* ! you can also make the postion relative to the  some other ancestor accept the whole window */
+    /* ! after you set positon as relative in some ancestor block it will take determine coordinaes relative to that block  */
+
+    top: 100px;
+    left: 100px;
+    /* 100px from top and 100px from left as well  */
+
+    left: -100000px;
+    /* this visiblally removes something from the page but still having it as a part of the page  */
+    /* good for accessibility */
+}
+
+.relative {
+    background-color: darkblue;
+    position: relative;
+    /* 
+    ! "relative" means the element is positioned relative to its normal position ==> relative to its own position:
+    !normal position for "absolute" is its parent postiton ==> relative to its parent position...
+     */
+    top: 120px;
+    left: 320px;
+    ;
+}
+
+.fixed {
+    background-color: dodgerblue;
+    position: fixed;
+    /* fixed makes the element appear fixed at its position even if we scroll  */
+    top: 100px;
+    /* it is always relative to the page itself */
+    z-index: 3;
+    /* it makes it come top of other elements */
+
+}
+
+.sticky {
+    background-color: aquamarine;
+    position: sticky;
+    /* sticky elements stick to the window like a fixed unit untill the "parent" element goes out of cview  */
+    /* usefull for navbars */
+    top: 0;
+}
