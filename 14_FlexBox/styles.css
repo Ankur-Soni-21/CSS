@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* !PRACTICE ==> FLEXBOX FROGY  */
+
+
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid black;
+
+
+
+    display: flex;
+    /* by default the content is placed in a row instead of a cloumn as it is suposed to be  */
+    justify-content: center;
+    /* used for controlling the x a-axis  */
+    /* *places the content in the center  */
+    justify-content: space-between;
+    /* * adds spaes betwwen the elements and not at the ends  */
+    align-items: center;
+    /* used for controlling the y-azis */
+
+
+
+    /* !changing the flex direction form row to coloumn */
+    flex-direction: column;
+    align-items: flex-start;
+
+
+
+    /* !making it litle responsive by eleimination the overflow while changing the vp width  */
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* it breaks down the row into mutiple rows  */
+
+
+
+    /* *shorter version of the same code  */
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    /* reversed the units  */
+    flex-direction: row-reverse;
+}
+
+.box {
+    min-height: 100px;
+    min-width: 200px;
+    background-color: #333;
+    color: wheat;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: 2px white solid;
+
+    /* *alligning the contents inside the box ==> text  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* *giving them equal spaces */
+    flex-grow: 1;
+    /* now every unit has an equal amount of space covered */
+    /* * another way of giving width to these units  */
+    flex-basis: 100px;
+}
+
+.box:nth-child(2) {
+    flex-grow: 2;
+    /* it makes 2nd unit take twice as much space as 3rd and 1st ot taking half of the total space  */
+    flex-shrink: 5;
+    /* similarly while shrinking the window the second element will shrink twice as mush as the 1sst and 3rd units  */
+}
+
+.box:nth-child(5) {
+    flex-shrink: 2;
+    /* similarly while shrinking the window the second element will shrink twice as mush as the 4th and 5th units  */
+    order: -1;
+    /* places the unit at first */
+    order: 2;
+    /* places it 2 positons form the defualt  */
+    order: 0;
+    /* defaults */
+}
+
+/* ! shortway of doing ==> grow shrink basis */
+/* flex : 2 2 250px */
