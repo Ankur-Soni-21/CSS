@@ -38,3 +38,17 @@ body {
     /* a problem that may arise is at somepoint while changing the wiewport width the padding of h2 may show up in 2 diffrent columns */
     break-inside: avoid;
 }
+
+.quote {
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+}
+
+no-wrrap {
+    white-space: nowrap;
+    /* helps in not breaking the quote ... now if the viewport gets too small the long dash line before the "author" 
+    of the quote shift to the next line with name of the author... */
+}
