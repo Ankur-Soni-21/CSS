@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+/* ! VARIABLES */
+:root {
+    /* COLORS */
+    --BGCOLOR: darkslategray;
+    --TEXTCLOR: wheat;
+    --BORDER-COLOR: #333;
+    /* SIZES */
+    --XS: 0.5rem;
+    --SM: 2rem;
+    --MD: 4rem;
+    --LG: 8rem;
+    --XL: 16rem;
+    /* BORDERS */
+    --BORDER: 2rem solid var(--BORDER-COLOR);
+
+    /* !FUCTIONS */
+    --FS: min(4.4rem, 100px);
+    /* * MIN ==> Chooses the max value between the two */
+    --FS2: max(2.4rem, 100px);
+    /* *MAX ==> Chooses the min value between the two */
+    --FS3: clamp(2.4rem, 5vw, 4.4rem);
+    /* *CLAMP ==> Clamp ==> Min Max Ideal */
+}
+
+p {
+    background-color: var(--BGCOLOR);
+    color: var(--TEXTCLOR);
+    border: var(--XS) double var(--BORDER-COLOR);
+    font-size: var(--MD);
+    display: inline-block;
+    width: var(--XL);
+
+    /* Using Functions*/
+    font-size: var(--FS2);
+}
+
+.p {
+    border: var(--BORDER);
+    font-size: var(--FS);
+}
+
+/* DARK MODE */
+/* If you cnhabe the settings in your windows 
+to light mode it will return back to normal */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR: blueviolet;
+        --TEXTCLOR: #eee;
+        --BORDER-COLOR: #eee;
+    }
+
+    main {
+        width: calc(100vw - 2rem);
+        /* *Calc ==> calculates  */
+    }
+}

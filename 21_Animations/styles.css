@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace, sans-serif;
+    background: #f1f1f1;
+    font-size: 2rem;
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child {
+    background-color: dodgerblue;
+    /* transform: translateX(50%); */
+    transform: rotate(90deg);
+    /* rotates it 90 degrees clockwise */
+    transform: scale(1.5, 0.5);
+    /* scale(x, y) */
+    transform: skew(30deg, 30deg);
+}
+
+div:nth-child(2) {
+    background-color: yellow;
+    /* transform: translateY(-50%); */
+    transform: rotateY(120deg);
+    /* rotates in y axis 120 degrees clockwise */
+    transform: scaleX(1.5);
+    /* scales in x axis */
+    transform: skewX(30deg);
+}
+
+div:last-child {
+    background-color: limegreen;
+    /* transform: translate(100%, -5rem); */
+    /* X and Y */
+
+    transform: rotateX(90deg);
+    /* rotates in x axis 90 degrees clockwise */
+    /* ! it actually disappears cux we are rotating it 90 degress */
+    transform: scaleY(1.5);
+    /* scales in y axis */
+    transform: skewY(30deg);
+}
+
+div:hover {
+    background-color: midnightblue;
+    transition-property: background-color, transform;
+    transition-duration: 2s, 3s;
+    /* 2s for background-color and 3s for transform */
+    transition-delay: 0.5s;
+
+    /* Shorthand */
+    transition: background-color 2s 0.5s, transform 3s 0.5s;
+    /* OR if everythin is to be kept same */
+    transition: all 2s 0.5s;
+    /* Timing function */
+    transition-timing-function: ease-in-out;
+    /* OR */
+    transition: all 2s 0.5s ease-in-out;
+}
+
+div:last-child:hover {
+    transform: rotate(180deg);
+    /* rotates it 180 degrees clockwise */
+}
+
+/* ANIMATION */
+.animate {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    /* NO of times */
+    animation-direction: normal;
+    /* direction */
+    animation-fill-mode: forwards;
+    /* forwards, backwards, both, none */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateX(50vw) rotate(180deg);
+    }
+
+    66% {
+        transform: translateX(-50vw) rotate(-180deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
